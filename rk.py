@@ -2,18 +2,27 @@ import sys
 board=[["1", "2", "3"],["4", "5", "6"],["7", "8", "9"]]
 
 def drawBoard1():
+    """
+    Draws the Board
+    """
     print("")
     for row in board:
         for x in row:
             sys.stdout.write(x+"   ")
         print("")
 def drawBoard2(baa):
+     """
+    Draws the intermediate Board
+    """
     print("")
     for row in board:
         for x in row:
             sys.stdout.write(x+"   ")
         print("")
 def checkwin(baa):
+    """
+    Checks to see if anyone has won
+    """
     if baa[0][0]==baa[0][1] and baa[0][0]==baa[0][2] and baa[0][0]=="X":
         return 100
     elif baa[0][0]==baa[0][1] and baa[0][0]==baa[0][2] and baa[0][0]=="O":
@@ -49,13 +58,18 @@ def checkwin(baa):
     else:
         return 0
 def FullBoard(x):
+    """
+    Checks to see if the board is full
+    """
     for i in x:
         for t in i:
             if t in "123456789":
                 return False
     return True
 def minimax(baa,level):
-    
+    """
+    Minimax is an implementation of the MINIMAX algorithm on the game of TIC TAC TOE
+    """
     #print level
     if(checkwin(baa)==100):
         return 100
@@ -97,6 +111,9 @@ def minimax(baa,level):
                     return max(a)          
 movecount=0
 def StartGame():
+    """
+    MAIN FUNCTION
+    """
     print "Welcome to this game of tic tac toe vs the computer. Prepare to lose or draw."
     movecount=0
     while movecount<=8:
