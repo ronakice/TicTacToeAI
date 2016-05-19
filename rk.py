@@ -11,7 +11,7 @@ def drawBoard1():
             sys.stdout.write(x+"   ")
         print("")
 def drawBoard2(baa):
-     """
+    """
     Draws the intermediate Board
     """
     print("")
@@ -53,7 +53,7 @@ def checkwin(baa):
         return -100
     elif baa[2][0]==baa[1][1] and baa[2][0]==baa[0][2] and baa[2][0]=="X":
         return 100
-    elif baa[2][0]==baa[1][1] and baa[0][0]==baa[0][2] and baa[2][0]=="O":
+    elif baa[2][0]==baa[1][1] and baa[2][0]==baa[0][2] and baa[2][0]=="O":
         return -100
     else:
         return 0
